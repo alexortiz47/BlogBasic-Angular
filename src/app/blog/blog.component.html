@@ -1,10 +1,27 @@
+<div class="container p-3">
+    <div class="row">
+      <div class="col-6 mx-auto">
+          <div class="form-group">
+              <label>Filtrar por Categoría</label>
+              <select class="form-control" (change)="categoriaSelec($event)">
+                <option>Ciencia</option>
+                <option>Tecnología</option>
+                <option>Música</option>
+                <option>Deportes</option>
+              </select>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="container">
+  <div class="border-bottom mb-3 p-3" *ngFor="let post of listaPosts">
+    <h3> {{ post.titulo }} </h3>
+    <p> {{ post.texto }} </p>
+    <h5> {{ post.autor }} </h5>
+    <p> {{ post.fecha }} </p>
+    <h5> {{ post.categoria }} </h5>
+    <img [src]="post.imagen" alt="">
+  </div>
+</div>
 
-<ul *ngFor="let post of listaPosts">
-  <li> {{ post.titulo }} </li>
-  <li> {{ post.texto }} </li>
-  <li> {{ post.autor }} </li>
-  <li> {{ post.fecha }} </li>
-  <li> {{ post.categoria }} </li>
-  <img [src]="post.imagen" alt="">
-</ul>
 

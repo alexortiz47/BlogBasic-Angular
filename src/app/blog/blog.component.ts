@@ -18,4 +18,8 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
   }
 
+  categoriaSelec($event) {
+    this.listaPosts = this.postsService.getPostByCategoria($event.target.value)
+  }
+
 }
