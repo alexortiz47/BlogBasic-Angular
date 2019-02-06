@@ -1,3 +1,10 @@
-<p>
-  blog works!
-</p>
+
+<ul *ngFor="let post of listaPosts">
+  <li> {{ post.titulo }} </li>
+  <li> {{ post.texto }} </li>
+  <li> {{ post.autor }} </li>
+  <li> {{ post.fecha }} </li>
+  <li> {{ post.categoria }} </li>
+  <img [src]="post.imagen" alt="">
+</ul>
+
