@@ -18,6 +18,7 @@ export class PostsService {
 
   agregarPosts(pPost: Post) {
     this.arrPosts.push(pPost);
+    localStorage.setItem('posts', JSON.stringify(this.arrPosts)) // Agrega nuestros post que estan en el array en el local storage
   }
 
   getPostByCategoria(pCategoria: string): Post[] {
