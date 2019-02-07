@@ -9,7 +9,7 @@ export class PostsService {
   arrPosts: Post[];
 
   constructor() {
-    this.arrPosts = []
+    this.arrPosts = JSON.parse(localStorage.getItem('posts')) // Recuperamos lo que haya almacenado en el localStorage
   }
 
   getAllPosts() {
